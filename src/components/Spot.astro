@@ -1,0 +1,35 @@
+---
+const {title, img, at} = Astro.props;
+---
+
+
+<div class="window_top">
+    <div class="inline">
+        <h1>{title}</h1>@{at} <br>
+        <img src={img}><br>
+    </div>
+    <slot></slot>
+</div>
+
+<style>
+.window_top {
+    padding: 0.2em 0.5em;
+    margin: 1em 2em;
+    color: #565656;
+    background: #ffeaea;
+    box-shadow: 0px 0px 0px 10px #ffeaea;
+    border: dashed 2px #ffc3c3;
+    border-radius: 8px;
+
+    width: 500px;
+}
+.window_top h1 {
+    margin: 0; 
+    padding: 0;
+}
+
+img {
+    width: 80%;
+    margin: 0 auto;
+}
+</style>
